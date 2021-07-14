@@ -39,7 +39,7 @@ export default function Search() {
   useEffect(() => {
     setQuery(route.params.q)
   }, [route.params.q])
-  const { data, isLoading, refetch, fetchNextPage } = useInfiniteQuery(
+  const { data, isLoading, isIdle, refetch, fetchNextPage } = useInfiniteQuery(
     ['search', query],
     async ({ pageParam }) => {
       const response = await fetch(
@@ -74,7 +74,7 @@ export default function Search() {
         refreshing={isLoading}
         onRefresh={refetch}
         removeClippedSubviews={true}
-        ListFooterComponent={isLoading ? undefined : <ListFooter />}
+        ListFooterComponent={isLoading || isIdle ? undefined : <ListFooter />}
       />
     </SafeAreaView>
   )
