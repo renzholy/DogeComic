@@ -1,9 +1,9 @@
-import { NavigationProp } from '@react-navigation/native'
+import type { NavigationProp } from '@react-navigation/native'
 import React from 'react'
 import { Image, Text, TouchableNativeFeedback, View } from 'react-native'
 import tailwind from 'tailwind-rn'
 
-import { ParamList } from '../type'
+import type { ParamList } from '../type'
 
 export type BookItem = {
   id: string

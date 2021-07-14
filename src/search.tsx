@@ -11,7 +11,7 @@ import {
 } from '@react-navigation/native'
 import tailwind from 'tailwind-rn'
 
-import { ParamList } from './type'
+import type { ParamList } from './type'
 import { BookCard, BookItem } from './components/card'
 import ListFooter from './components/list-footer'
 import { parseSearchResult } from './utils/parse'

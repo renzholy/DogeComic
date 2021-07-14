@@ -11,7 +11,7 @@ import {
   NavigationProp,
 } from '@react-navigation/native'
 
-import { ParamList } from './type'
+import type { ParamList } from './type'
 import ListFooter from './components/list-footer'
 import { EpisodeCard } from './components/card'
 

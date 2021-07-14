@@ -6,7 +6,7 @@ import { last, compact, flatten } from 'lodash'
 import { useNavigation, NavigationProp } from '@react-navigation/native'
 import Icon from 'react-native-vector-icons/Ionicons'
 
-import { ParamList } from './type'
+import type { ParamList } from './type'
 import { BookCard, BookItem } from './components/card'
 import ListFooter from './components/list-footer'
 import { parseSearchResult } from './utils/parse'

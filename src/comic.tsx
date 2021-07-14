@@ -14,7 +14,7 @@ import {
 import Icon from 'react-native-vector-icons/Ionicons'
 import Preference from 'react-native-preference'
 
-import { ParamList } from './type'
+import type { ParamList } from './type'
 import AutoHeightImage from './components/auto-height-image'
 import ListFooter from './components/list-footer'
 import { useCallback } from 'react'

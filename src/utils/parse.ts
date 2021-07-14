@@ -1,7 +1,7 @@
 import { last } from 'lodash'
 import type cheerio from 'cheerio'
 
-import { BookItem } from '../components/card'
+import type { BookItem } from '../components/card'
 
 export function parseSearchResult(
   $: cheerio.Root,

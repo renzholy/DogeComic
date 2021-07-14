@@ -10,7 +10,9 @@
     "strict": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "skipLibCheck": false
+    "skipLibCheck": false,
+    "resolveJsonModule": true,
+    "importsNotUsedAsValues": "error"
   },
   "exclude": [
     "node_modules",
