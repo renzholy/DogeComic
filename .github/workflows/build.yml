@@ -2,7 +2,7 @@ name: react-native-android-build-apk
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   build-android:
     needs: install-and-test
