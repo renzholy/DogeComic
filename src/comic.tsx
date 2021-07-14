@@ -11,7 +11,6 @@ import {
   useNavigation,
   useRoute,
 } from '@react-navigation/native'
-import { TransitionPresets } from '@react-navigation/stack'
 import Icon from 'react-native-vector-icons/Ionicons'
 import Preference from 'react-native-preference'
 
@@ -82,7 +81,6 @@ export default function Comic() {
           }}
         />
       ),
-      ...TransitionPresets.SlideFromRightIOS,
     })
   }, [currentPage, data.length, isGallery, navigation, route.params.title])
 

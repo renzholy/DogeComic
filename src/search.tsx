@@ -9,7 +9,6 @@ import {
   useNavigation,
   NavigationProp,
 } from '@react-navigation/native'
-import { TransitionPresets } from '@react-navigation/stack'
 import tailwind from 'tailwind-rn'
 
 import { ParamList } from './type'
@@ -32,7 +31,6 @@ export default function Search() {
           style={tailwind('text-white')}
         />
       ),
-      ...TransitionPresets.SlideFromRightIOS,
     })
   }, [navigation, route.params.q])
   const [query, setQuery] = useState('')

@@ -5,7 +5,6 @@ import { SafeAreaView, VirtualizedList } from 'react-native'
 import { last, compact, flatten } from 'lodash'
 import { useNavigation, NavigationProp } from '@react-navigation/native'
 import Icon from 'react-native-vector-icons/Ionicons'
-import { TransitionPresets } from '@react-navigation/stack'
 
 import { ParamList } from './type'
 import { BookCard, BookItem } from './components/card'
@@ -26,7 +25,6 @@ export default function Home() {
           }}
         />
       ),
-      ...TransitionPresets.SlideFromRightIOS,
     })
   }, [navigation])
   const { data, isLoading, refetch, fetchNextPage } = useInfiniteQuery(

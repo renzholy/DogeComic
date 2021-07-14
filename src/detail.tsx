@@ -10,7 +10,6 @@ import {
   useNavigation,
   NavigationProp,
 } from '@react-navigation/native'
-import { TransitionPresets } from '@react-navigation/stack'
 
 import { ParamList } from './type'
 import ListFooter from './components/list-footer'
@@ -27,7 +26,6 @@ export default function Detail() {
   useEffect(() => {
     navigation.setOptions({
       title: route.params.title,
-      ...TransitionPresets.SlideFromRightIOS,
     })
   }, [navigation, route.params.title])
   const {
