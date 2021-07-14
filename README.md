@@ -8,5 +8,6 @@ Unofficial native client for [dogemanga](https://dogemanga.com/)
 
 ### TODO
 
+- [ ] navigate between episodes quickly
 - [ ] use volume keys to scroll/flip comics
 - [ ] favorite comics
