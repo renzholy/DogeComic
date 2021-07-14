@@ -6206,6 +6206,11 @@ react-native-parse-html@^2.2.6:
   dependencies:
     react-native-stream "^0.1.0"
 
+react-native-preference@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/react-native-preference/-/react-native-preference-2.2.1.tgz#31dc20666768d1a03dd6eedfd122556099b968c5"
+  integrity sha512-a4IQ6JZLDfCNjmihXQCnbRp/ygLv7uH9UOXnKFUKUFa298bfUraVGI41MNyu2R1IES5WbiY+bKjgWPmbVPgbeQ==
+
 react-native-reanimated@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-2.2.0.tgz#a6412c56b4e591d1f00fac949f62d0c72c357c78"

@@ -13,10 +13,14 @@ import {
 } from '@react-navigation/native'
 import { TransitionPresets } from '@react-navigation/stack'
 import Icon from 'react-native-vector-icons/Ionicons'
+import Preference from 'react-native-preference'
 
 import { ParamList } from './type'
 import AutoHeightImage from './components/auto-height-image'
 import ListFooter from './components/list-footer'
+import { useCallback } from 'react'
+
+const PREFERENCE_KEY = 'comic-view-mode'
 
 export default function Comic() {
   const route = useRoute<RouteProp<ParamList, 'Comic'>>()
@@ -46,7 +50,24 @@ export default function Comic() {
         }),
     )
   }, [html])
-  const [isGallery, setIsGallery] = useState(true)
+  const [isGallery, setIsGallery] = useState(
+    Preference.get(PREFERENCE_KEY) === 'gallery',
+  )
+  useEffect(() => {
+    Preference.setWhiteList([PREFERENCE_KEY])
+  }, [])
+  const handlePreferenceChange = useCallback(
+    (changed: { [key: string]: any }) => {
+      setIsGallery(changed[PREFERENCE_KEY] === 'gallery')
+    },
+    [],
+  )
+  useEffect(() => {
+    Preference.addPreferenceChangedListener(handlePreferenceChange)
+    return () => {
+      Preference.removePreferenceChangedListener(handlePreferenceChange)
+    }
+  }, [handlePreferenceChange])
   useEffect(() => {
     navigation.setOptions({
       title: `${route.params.title} (${currentPage + 1 || '-'}/${
@@ -57,17 +78,17 @@ export default function Comic() {
           backgroundColor="transparent"
           name={isGallery ? 'book-outline' : 'albums-outline'}
           onPress={() => {
-            setIsGallery((old) => !old)
+            Preference.set(PREFERENCE_KEY, isGallery ? 'feed' : 'gallery')
           }}
         />
       ),
       ...TransitionPresets.SlideFromRightIOS,
     })
-  }, [navigation, route.params.title, data, currentPage, isGallery])
+  }, [currentPage, data.length, isGallery, navigation, route.params.title])
 
   return (
     <SafeAreaView>
-      {isGallery ? (
+      {Preference.get(PREFERENCE_KEY) === 'gallery' ? (
         data.length ? (
           <Gallery
             initialIndex={currentPage}
