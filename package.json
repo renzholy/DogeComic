@@ -1,0 +1,64 @@
+{
+  "name": "DogeComic",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --config .prettierrc --write ."
+  },
+  "dependencies": {
+    "@react-native-community/masked-view": "^0.1.11",
+    "@react-navigation/native": "^5.9.4",
+    "@react-navigation/stack": "^5.14.5",
+    "cheerio": "npm:react-native-cheerio",
+    "dayjs": "^1.10.6",
+    "lodash": "^4.17.21",
+    "react": "^17.0.2",
+    "react-native": "^0.64.2",
+    "react-native-awesome-gallery": "^0.1.7",
+    "react-native-gesture-handler": "^1.10.3",
+    "react-native-reanimated": "^2.2.0",
+    "react-native-safe-area-context": "^3.2.0",
+    "react-native-screens": "^3.4.0",
+    "react-native-vector-icons": "^8.1.0",
+    "react-query": "^3.18.1",
+    "tailwind-rn": "^3.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/runtime": "^7.14.6",
+    "@react-native-community/eslint-config": "^3.0.0",
+    "@types/cheerio": "^0.22.30",
+    "@types/jest": "^26.0.24",
+    "@types/lodash": "^4.14.171",
+    "@types/react-native": "^0.64.12",
+    "@types/react-native-vector-icons": "^6.4.8",
+    "@types/react-test-renderer": "^17.0.1",
+    "babel-jest": "^27.0.6",
+    "eslint": "^7.30.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "jest": "^27.0.6",
+    "metro-react-native-babel-preset": "^0.66.1",
+    "react-test-renderer": "17.0.2",
+    "typescript": "^4.3.5"
+  },
+  "resolutions": {
+    "@types/react": "^17"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
