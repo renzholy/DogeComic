@@ -5,3 +5,8 @@
 Unofficial native client for [dogemanga](https://dogemanga.com/)
 
 [![release](https://github.com/renzholy/DogeComic/actions/workflows/release.yml/badge.svg)](https://github.com/renzholy/DogeComic/actions/workflows/release.yml)
+
+### TODO
+
+- [ ] use volume keys to scroll/flip comics
+- [ ] favorite comics
